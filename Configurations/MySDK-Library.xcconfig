@@ -1,0 +1,9 @@
+//
+//  MySDK-Library.xcconfig
+//  MySDK
+//
+//  Created by wenzhaot on 9/2/16.
+//  Copyright © 2016 cocoaman. All rights reserved.
+//
+
+MACH_O_TYPE = staticlib

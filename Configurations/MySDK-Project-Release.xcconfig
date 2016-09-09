@@ -1,0 +1,9 @@
+//
+//  MySDK-Project-Release.xcconfig
+//  MySDK
+//
+//  Created by wenzhaot on 9/2/16.
+//  Copyright © 2016 cocoaman. All rights reserved.
+//
+
+#include "MySDK-Project.xcconfig"
