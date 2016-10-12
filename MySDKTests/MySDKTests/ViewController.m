@@ -19,6 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [MySDKTest printTest];
+    
+    MySDKView *sdkView = [[MySDKView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
+    [self.view addSubview:sdkView];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,7 @@
 		C923972B1D58BAC0003503A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C923972A1D58BAC0003503A1 /* Assets.xcassets */; };
 		C923972E1D58BAC0003503A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C923972C1D58BAC0003503A1 /* LaunchScreen.storyboard */; };
 		C99CD9F71D5B414E001A8782 /* MySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99CD9F61D5B414E001A8782 /* MySDK.framework */; };
+		C9A5BC641DADF6650037C774 /* MySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9A5BC631DADF6650037C774 /* MySDK.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		C923972D1D58BAC0003503A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C923972F1D58BAC0003503A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99CD9F61D5B414E001A8782 /* MySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MySDK.framework; path = "../MySDK/build/Debug-iphoneos/MySDK.framework"; sourceTree = "<group>"; };
+		C9A5BC631DADF6650037C774 /* MySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MySDK.bundle; path = ../build/MySDK.bundle; sourceTree = "<group>"; };
+		C9A5BE0D1DAE2DEB0037C774 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +48,11 @@
 		C92397121D58BAC0003503A1 = {
 			isa = PBXGroup;
 			children = (
+				C9A5BC631DADF6650037C774 /* MySDK.bundle */,
 				C99CD9F61D5B414E001A8782 /* MySDK.framework */,
 				C923971D1D58BAC0003503A1 /* MySDKTests */,
 				C923971C1D58BAC0003503A1 /* Products */,
+				C9A5BE0C1DAE2DEA0037C774 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +88,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C9A5BE0C1DAE2DEA0037C774 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5BE0D1DAE2DEB0037C774 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,11 +122,12 @@
 		C92397131D58BAC0003503A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = cocoaman;
 				TargetAttributes = {
 					C923971A1D58BAC0003503A1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2PK98X72F9;
 					};
 				};
 			};
@@ -140,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A5BC641DADF6650037C774 /* MySDK.bundle in Resources */,
 				C923972E1D58BAC0003503A1 /* LaunchScreen.storyboard in Resources */,
 				C923972B1D58BAC0003503A1 /* Assets.xcassets in Resources */,
 				C92397291D58BAC0003503A1 /* Main.storyboard in Resources */,
@@ -195,8 +210,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -240,8 +257,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -269,9 +288,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PK98X72F9;
 				INFOPLIST_FILE = MySDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cocoaman.MySDKTests;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wenzhaot.MySDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -280,9 +301,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PK98X72F9;
 				INFOPLIST_FILE = MySDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cocoaman.MySDKTests;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wenzhaot.MySDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

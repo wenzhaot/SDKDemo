@@ -6,4 +6,5 @@
 //  Copyright © 2016 cocoaman. All rights reserved.
 //
 
-MACH_O_TYPE = bundle
+GCC_PREFIX_HEADER = MySDK/MySDK-Prefix.pch
+GCC_PRECOMPILE_PREFIX_HEADER = YES

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MySDK/MySDKTest.h>
+#import <MySDK/MySDKView.h>
 
 //! Project version number for MySDK.
 FOUNDATION_EXPORT double MySDKVersionNumber;
